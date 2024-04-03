@@ -3,21 +3,27 @@ import csv
 # set filepath
 budget_file_path = "PyBank/Resources/budget_data.csv"
 
+#set variables
+total_months = 0
+
+# open and read csv
+with open(budget_file_path) as budget_file:
+    csv_file = csv.reader(budget_file)
+    next(csv_file)
+
+    for row in csv_file:
+        total_months = total_months +1
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+#print(f'Financial Analysis')
+#print(f'----------------------------')
+print(f'Total Months:', total_months)
+#print(f'Total:')
+#print(f'Average Change:')
+#print(f'Greatest Increase in Profits:')
+#print(f'Greatest Decrease in Profits:')
 
 
 
