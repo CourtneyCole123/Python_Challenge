@@ -8,8 +8,8 @@ total_months = 0
 sum_profit_loss = 0
 profit_loss_list = []
 changes = []
-current_month = 0
-previous_month = 0
+greatest_increase = 0
+greatest_decrease = 0
 monthly_change = 0
 profit_loss_dict = {}
 offset_list = []
@@ -26,12 +26,16 @@ with open(budget_file_path) as budget_file:
         profit_loss = row [1]
         sum_profit_loss= int(profit_loss)+ sum_profit_loss
         profit_loss_list.append(row[1])
-    
+
     for row in profit_loss_list:
        row = int(row[1])
-       monthly_change = int(profit_loss_list[int(row)+1]) - int(profit_loss_list[int(row)])
+       monthly_change = int(profit_loss_list[int(row)]) - int(profit_loss_list[int(row)-1])
        changes.append(monthly_change)
     print(changes)
+
+
+
+
 
 
 
