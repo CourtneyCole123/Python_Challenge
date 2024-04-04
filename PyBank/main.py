@@ -18,7 +18,9 @@ with open(budget_file_path) as budget_file:
         month_date = row [0]
         profit_loss = row [1]
         sum_profit_loss= int(profit_loss)+ sum_profit_loss
+    print(sum_profit_loss)
 
+    
 
 
 
