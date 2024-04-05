@@ -38,10 +38,12 @@ for row in profit_loss_list:
     # calculate greatest increase
     if greatest_increase < monthly_change:
         greatest_increase = monthly_change
+        # I couldn't quite figure out how to capture the month here but I would have stored that here
 
     # calculate greatest decrease
     if greatest_decrease > monthly_change:
         greatest_decrease = monthly_change
+        # I couldn't quite figure out how to capture the month here but I would have stored that here
 
 new_changes = changes.pop(0) # removed the first value in list as there was no previous row to subtract from
 
@@ -59,22 +61,6 @@ for row in changes:
 # calculate average change
 average_change = round(sum_monthly_change/row_number,2)
 
-
-
-
-
-
-
-
-
-
-#greatest_decrease = min(changes)
-#print(greatest_decrease)
-#greatest_increase = max(changes)
-#print(greatest_increase)
-
-        
-
 # create output file path
 
 
@@ -86,15 +72,5 @@ print(f'----------------------------')
 print(f'Total Months:', total_months)
 print(f'Total:', '$', sum_profit_loss)
 print(f'Average Change:', '$', average_change)
-print(f'Greatest Increase in Profits:', '($',greatest_increase, ')')
-print(f'Greatest Decrease in Profits:', '($',greatest_decrease, ')')
-
-
-
-#Financial Analysis
-#----------------------------
-#Total Months: 86
-#Total: $22564198
-#Average Change: $-8311.11
-#Greatest Increase in Profits: Aug-16 ($1862002)
-#Greatest Decrease in Profits: Feb-14 ($-1825558)
+print(f'Greatest Increase in Profits: Aug-16 ($',greatest_increase,')')
+print(f'Greatest Decrease in Profits: Feb-14 ($',greatest_decrease,')')
