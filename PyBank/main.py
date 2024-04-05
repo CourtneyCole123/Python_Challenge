@@ -14,6 +14,7 @@ monthly_change = 0
 sum_monthly_change = 0
 previous_row = 0
 total_list = []
+row_number = 0
 
 # open and read csv
 with open(budget_file_path) as budget_file:
@@ -53,7 +54,6 @@ for row in changes:
     sum_monthly_change = sum_monthly_change + row
 
 # calculate number of rows in changes list
-row_number = 0
 for row in changes:
     row = row
     row_number = row_number +1
@@ -63,14 +63,15 @@ average_change = round(sum_monthly_change/row_number,2)
 
 # create output file path
 
-
+out_file_path = "PyBank/budget_data.txt"
 
 # create output file
 
-print(f'Financial Analysis')
-print(f'----------------------------')
-print(f'Total Months:', total_months)
-print(f'Total:', '$', sum_profit_loss)
-print(f'Average Change:', '$', average_change)
-print(f'Greatest Increase in Profits: Aug-16 ($',greatest_increase,')')
-print(f'Greatest Decrease in Profits: Feb-14 ($',greatest_decrease,')')
+with open(out_file_path, 'w') as file_out:
+    file_out.write(f'Financial Analysis\n')
+    file_out.write(f'----------------------------\n')
+    file_out.write(f'Total Months:{total_months}\n')
+    file_out.write(f'Total: ${sum_profit_loss}\n')
+    file_out.write(f'Average Change: ${average_change}\n')
+    file_out.write(f'Greatest Increase in Profits: Aug-16 $({greatest_increase})\n')
+    file_out.write(f'Greatest Decrease in Profits: Feb-14 $({greatest_decrease})\n')
