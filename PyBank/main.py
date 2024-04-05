@@ -34,6 +34,14 @@ for row in profit_loss_list:
     previous_row = row
 new_changes = changes.pop(0)
 
+sum_monthly_change = 0
+for row in changes:
+    row = row
+    sum_monthly_change = sum_monthly_change + row
+print(sum_monthly_change)
+
+
+
 
         
 
