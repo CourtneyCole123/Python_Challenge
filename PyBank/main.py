@@ -11,8 +11,6 @@ changes = []
 greatest_increase = 0
 greatest_decrease = 0
 monthly_change = 0
-profit_loss_dict = {}
-offset_list = []
 change = 0
 
 # open and read csv
