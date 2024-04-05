@@ -27,13 +27,19 @@ with open(budget_file_path) as budget_file:
         profit_loss_list.append(int(row[1]))
 
 previous_row = 0
-
 for row in profit_loss_list:
     row = row
     monthly_change = row - previous_row
     changes.append(monthly_change)
     previous_row = row
-    
+
+sum_monthly_changes = 0
+next_row = 0
+for row in changes:
+    row = row
+    sum_monthly_changes = row + next_row
+    total_monthly_changes = sum_monthly_changes+ total_monthly_changes
+print(total_monthly_changes)
 
    # total_changes = 1 + total_changes
 #print(sum_changes)
