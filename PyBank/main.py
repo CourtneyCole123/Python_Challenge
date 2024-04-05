@@ -34,13 +34,7 @@ for row in profit_loss_list:
     changes.append(monthly_change)
     previous_row = row
     
-total_changes = 0
-sum_total_changes = 0
 
-for monthly_change in changes:
-    monthly_change = monthly_change
-    sum_monthly_change = monthly_change + total_changes    
-print(monthly_change)
    # total_changes = 1 + total_changes
 #print(sum_changes)
 
