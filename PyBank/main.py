@@ -11,6 +11,7 @@ changes = []
 greatest_increase = 0
 greatest_decrease = 0
 monthly_change = 0
+sum_monthly_change = 0
 change = 0
 
 # open and read csv
@@ -32,12 +33,16 @@ for row in profit_loss_list:
     monthly_change = row - previous_row
     changes.append(monthly_change)
     previous_row = row
-print(changes)
+    
+total_changes = 0
+sum_total_changes = 0
 
-
-
-
-
+for monthly_change in changes:
+    monthly_change = monthly_change
+    sum_monthly_change = monthly_change + total_changes    
+print(monthly_change)
+   # total_changes = 1 + total_changes
+#print(sum_changes)
 
 
 #print(f'Financial Analysis')
