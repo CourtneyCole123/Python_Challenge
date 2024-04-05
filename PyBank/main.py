@@ -38,7 +38,12 @@ sum_monthly_change = 0
 for row in changes:
     row = row
     sum_monthly_change = sum_monthly_change + row
-print(sum_monthly_change)
+
+row_number = 0
+for row in changes:
+    row = row
+    row_number = row_number +1
+print(row_number)
 
 
 
